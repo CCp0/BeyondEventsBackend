@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -24,9 +25,11 @@ public class LocationEntity {
     private String name;
 
     @Column(nullable = false)
-    private String type; // e.g. 'physical' or 'online', consider looking into ENUM
+    private String type; // e.g. 'physical' or 'online', consider looking into an ENUM
 
     private String address; // For physical meetings
 
     private String url; // For online teams / zoom meetings
+
+    private List<String> facilities;
 }

@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum FacilityFeatures {
-    VOTING("WHITEBOARD", true),
+    WHITEBOARD("WHITEBOARD", true),
     SCREEN("TV-SCREEN", true),
     KITCHEN("KITCHEN", true),
     SOCCER_PITCH("SOCCER PITCH", false),
