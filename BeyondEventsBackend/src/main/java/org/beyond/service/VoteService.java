@@ -30,4 +30,10 @@ public class VoteService {
     public VoteEntity addNewVote(VoteEntity u) {
         return voteRepository.save(u);
     }
+
+    public void organizeEvents()
+    {
+        List<VoteEntity> votes = getAllVotes();
+        
+    }
 }

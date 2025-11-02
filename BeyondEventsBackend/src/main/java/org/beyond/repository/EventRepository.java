@@ -6,15 +6,16 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface EventRepository extends JpaRepository<EventEntity, UUID> {
     List<EventEntity> findByTitle(String title);
 
-    List<EventEntity> findByParentUuid(UUID parentUuid);
+    Optional<List<EventEntity>> findByParentUuid(UUID parentUuid);
 
-    EventEntity findByid(UUID id);
+    Optional<EventEntity> findByid(UUID id);
 
     @Query(value = "SELECT * FROM events WHERE parent_uuid is null",
             nativeQuery = true)
